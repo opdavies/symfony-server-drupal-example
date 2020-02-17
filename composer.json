@@ -34,6 +34,15 @@
     "config": {
         "sort-packages": true
     },
+    "scripts": {
+        "copy-web-assets": "cp -vR assets/web/ web",
+        "post-install-cmd": [
+            "@copy-web-assets"
+        ],
+        "post-update-cmd": [
+            "@copy-web-assets"
+        ]
+    },
     "extra": {
         "drupal-scaffold": {
             "locations": {
